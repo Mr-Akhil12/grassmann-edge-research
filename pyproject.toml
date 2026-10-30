@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grassmann-edge-research"
+version = "0.0.1"
+description = "Independent attention-free edge sequence modeling research"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.3,<3", "numpy>=2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["grassmann_edge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

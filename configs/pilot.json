@@ -1,0 +1,13 @@
+{
+  "status": "correctness-smoke-only",
+  "seed": 2026,
+  "models": ["grassmann", "transformer", "local"],
+  "train": {
+    "steps": 4,
+    "batch": 2,
+    "context": 32,
+    "dimensions": 32,
+    "layers": 2
+  },
+  "warning": "not parameter-matched; not a natural-language benchmark"
+}
