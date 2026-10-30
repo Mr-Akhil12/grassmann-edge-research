@@ -1,0 +1,65 @@
+{
+  "status": "synthetic diagnostic - NOT architecture benchmark",
+  "date_utc": "2026-10-30T20:20:38.205812+00:00",
+  "device": "cpu",
+  "torch": "2.10.0+cu128",
+  "python": "3.11.9",
+  "args": {
+    "model": "all",
+    "steps": 4,
+    "batch": 2,
+    "length": 32,
+    "dim": 32,
+    "layers": 2,
+    "rank": 8,
+    "lag": 4,
+    "vocab": 32,
+    "seed": 2026,
+    "device": "cpu",
+    "out": "results/pilot_cpu.json"
+  },
+  "runs": [
+    {
+      "kind": "grassmann",
+      "parameters": 26640,
+      "first_loss": 3.5872862339019775,
+      "last_loss": 3.4178476333618164,
+      "validation_loss": 3.601879676183065,
+      "seconds": 0.6935469000600278,
+      "losses": [
+        3.5872862339019775,
+        3.4666833877563477,
+        3.7217164039611816,
+        3.4178476333618164
+      ]
+    },
+    {
+      "kind": "transformer",
+      "parameters": 28544,
+      "first_loss": 3.860842227935791,
+      "last_loss": 3.5912370681762695,
+      "validation_loss": 3.6386080582936606,
+      "seconds": 0.025932200020179152,
+      "losses": [
+        3.860842227935791,
+        3.7165112495422363,
+        3.451568126678467,
+        3.5912370681762695
+      ]
+    },
+    {
+      "kind": "local",
+      "parameters": 25872,
+      "first_loss": 3.6844496726989746,
+      "last_loss": 3.76769757270813,
+      "validation_loss": 3.537401040395101,
+      "seconds": 0.040776200010441244,
+      "losses": [
+        3.6844496726989746,
+        3.4604077339172363,
+        3.742558479309082,
+        3.76769757270813
+      ]
+    }
+  ]
+}
