@@ -16,10 +16,15 @@ def safe(args):
 
 
 def main():
+    git_exe = shutil.which("git")
+    if git_exe is None and os.name == "nt":
+        candidate = Path(os.environ.get("ProgramFiles", r"C:\Program Files")) / "Git" / "cmd" / "git.exe"
+        if candidate.is_file():
+            git_exe = str(candidate)
     info = {"os": platform.system(), "release": platform.release(),
             "architecture": platform.machine(), "logical_cpus": os.cpu_count(),
             "free_disk_gib": round(shutil.disk_usage(Path.cwd()).free / (1024**3), 2),
-            "git": safe(["git", "--version"]),
+            "git": safe([git_exe, "--version"]) if git_exe else None,
             "nvidia": safe(["nvidia-smi",
                 "--query-gpu=name,memory.total,memory.used,temperature.gpu,driver_version",
                 "--format=csv,noheader"]),
