@@ -1,0 +1,114 @@
+{
+  "run_label": "train_transformer_seed11_stop50",
+  "start_utc": "20261031T060603Z",
+  "command": [
+    "-m",
+    "scripts.p22_train",
+    "--kind",
+    "transformer",
+    "--seed",
+    "11",
+    "--stop-step",
+    "50",
+    "--checkpoint-every",
+    "20"
+  ],
+  "max_seconds": 150,
+  "limits": {
+    "temp_abort_c": 78,
+    "total_vram_abort_mib": 3000,
+    "min_free_ram_gib": 8,
+    "ac_required": true,
+    "child_cuda_allocator_fraction": 0.6,
+    "sensor_interval_s": 2
+  },
+  "samples": [
+    {
+      "utc": "2026-10-31T06:06:04.479902+00:00",
+      "gpu_temp_c": 44.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 9.56,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.801,
+      "ac_line": 1,
+      "battery_percent": 59
+    },
+    {
+      "utc": "2026-10-31T06:06:07.165452+00:00",
+      "gpu_temp_c": 44.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 10.83,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.3,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 4.0
+    },
+    {
+      "utc": "2026-10-31T06:06:09.386983+00:00",
+      "gpu_temp_c": 44.0,
+      "gpu_vram_mib": 63.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 10.77,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.172,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 6.2
+    },
+    {
+      "utc": "2026-10-31T06:06:11.466706+00:00",
+      "gpu_temp_c": 50.0,
+      "gpu_vram_mib": 713.0,
+      "gpu_util_percent": 98.0,
+      "nvidia_power_w": 22.45,
+      "sm_clock_mhz": 1950.0,
+      "free_ram_gib": 18.609,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 8.3
+    },
+    {
+      "utc": "2026-10-31T06:06:13.531087+00:00",
+      "gpu_temp_c": 57.0,
+      "gpu_vram_mib": 713.0,
+      "gpu_util_percent": 98.0,
+      "nvidia_power_w": 74.1,
+      "sm_clock_mhz": 1950.0,
+      "free_ram_gib": 18.564,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 10.4
+    },
+    {
+      "utc": "2026-10-31T06:06:15.597962+00:00",
+      "gpu_temp_c": 58.0,
+      "gpu_vram_mib": 713.0,
+      "gpu_util_percent": 96.0,
+      "nvidia_power_w": 73.11,
+      "sm_clock_mhz": 1972.0,
+      "free_ram_gib": 18.544,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 12.4
+    },
+    {
+      "utc": "2026-10-31T06:06:18.271714+00:00",
+      "gpu_temp_c": 48.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 11.02,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.787,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 15.1
+    }
+  ],
+  "failure": null,
+  "returncode": 0,
+  "elapsed_s": 15.09,
+  "finished_utc": "2026-10-31T06:06:18.271714+00:00"
+}

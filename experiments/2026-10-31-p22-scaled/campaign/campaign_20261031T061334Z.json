@@ -1,0 +1,78 @@
+{
+  "at_utc": "2026-10-31T06:13:34.596976+00:00",
+  "elapsed_seconds": 169.8279999999795,
+  "initial_progress": {
+    "11-grassmann": 100,
+    "11-transformer": 50,
+    "11-local": 50,
+    "17-grassmann": 0,
+    "17-transformer": 0,
+    "17-local": 0,
+    "23-grassmann": 0,
+    "23-transformer": 0,
+    "23-local": 0
+  },
+  "target_steps": 100,
+  "completed_blocks": [
+    {
+      "kind": "transformer",
+      "seed": 11,
+      "from": 50,
+      "to": 100,
+      "exit_code": 0
+    },
+    {
+      "kind": "local",
+      "seed": 11,
+      "from": 50,
+      "to": 100,
+      "exit_code": 0
+    },
+    {
+      "kind": "transformer",
+      "seed": 17,
+      "from": 0,
+      "to": 100,
+      "exit_code": 0
+    },
+    {
+      "kind": "local",
+      "seed": 17,
+      "from": 0,
+      "to": 100,
+      "exit_code": 0
+    },
+    {
+      "kind": "grassmann",
+      "seed": 17,
+      "from": 0,
+      "to": 100,
+      "exit_code": 0
+    },
+    {
+      "kind": "local",
+      "seed": 23,
+      "from": 0,
+      "to": 100,
+      "exit_code": 0
+    },
+    {
+      "kind": "grassmann",
+      "seed": 23,
+      "from": 0,
+      "to": 100,
+      "exit_code": 1
+    }
+  ],
+  "final_progress": {
+    "11-grassmann": 100,
+    "11-transformer": 100,
+    "11-local": 100,
+    "17-grassmann": 100,
+    "17-transformer": 100,
+    "17-local": 100,
+    "23-grassmann": 0,
+    "23-transformer": 0,
+    "23-local": 100
+  }
+}

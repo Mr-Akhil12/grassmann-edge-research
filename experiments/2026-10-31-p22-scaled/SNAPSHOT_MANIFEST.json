@@ -1,0 +1,182 @@
+{
+  "status": "PARTIAL SCALED P2.2 ENDURANCE PILOT; STOPPED ON 78 C GPU LIMIT",
+  "captured_utc": "2026-10-31T06:18:10.764182+00:00",
+  "excludes": "Private 75MB model and optimizer checkpoints remain under ignored results/",
+  "files": [
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/calibration/cal_d128_l4_r16_b4_c256.json",
+      "bytes": 1422,
+      "sha256": "1dd135e92fbcfa11641eae395d4d62bcea80e742e880b810670afb6411be9b67",
+      "source_sha256": "53feb559360c5025f529203a4dda973ec2f28fa75fe929d9ed4c49f17ac46ed1"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/calibration/cal_d192_l4_r24_b8_c256.json",
+      "bytes": 1429,
+      "sha256": "e0c7f34fd537ae303c25180137a8c04066a7f440630f26bb58124aa0b7fe29a1",
+      "source_sha256": "b6107b064569562b68dede75683195aa74f0a0012fb009263f48c90240b3f10e"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/calibration/cal_d256_l6_r24_b8_c512.json",
+      "bytes": 1434,
+      "sha256": "a9df3348aa5b9cd217de98a1286f05c7780cb9382b41d890f3e8fd5f05d2f4ff",
+      "source_sha256": "a5ad1a45ad55b9e11b932548b6ecc2b415fd51bae14f76b5326f23d52ef15161"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/calibration/cal_d288_l6_r28_b8_c512.json",
+      "bytes": 1433,
+      "sha256": "c521fd807593f2766bb9f66dc688b173844e35ad10b371db8de08becb7ed570c",
+      "source_sha256": "2eb7a3e31c9f3581e0d7b292075276b8cc7db84fab476cdd100989eded38669f"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/grassmann_seed11_d288_ctx512.metrics.json",
+      "bytes": 3943,
+      "sha256": "4f097c7e4e523d002a5e651903e2ed60dbafe66676d23211edccf7627ea9329e",
+      "source_sha256": "e098407673037de039f59d5cc4e85fe56748989cc594662e989fbe199b27b4d3"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/grassmann_seed17_d288_ctx512.metrics.json",
+      "bytes": 3945,
+      "sha256": "b494fe79898e7c081211cba55c76dcbe0530810461fedd09654e859935ca5958",
+      "source_sha256": "48c9d890c5e626e1ed09f6ebfb5cbe02e82805c656b59c3baea5a74f84778155"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/local_seed11_d288_ctx512.metrics.json",
+      "bytes": 3936,
+      "sha256": "92d0c1bcd9dea67c1198b49a75996f23a39a743bfde60db76b353e9dba2a5be4",
+      "source_sha256": "ef92a2cd5f9be7551e09ace8862f328be936b8f602c7b8c5da979fe17e3626f6"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/local_seed17_d288_ctx512.metrics.json",
+      "bytes": 3941,
+      "sha256": "c78fdde7d63a92f493723303226930859eba4f28f5c92ca3601ff1dc2d673aa3",
+      "source_sha256": "a0cc2fc166dfe7a1a7dd0048128d753d44b24ef5e865095345484517158bbf1b"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/local_seed23_d288_ctx512.metrics.json",
+      "bytes": 3937,
+      "sha256": "b85298394da3204182f96d56dfe02f5a500b09b5201349aea50e9ac8ce401d2e",
+      "source_sha256": "29fccdea1bec4525b1b4a9496c297bf50540277bbe9746f596a9f037c6ff333e"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/transformer_seed11_d288_ctx512.metrics.json",
+      "bytes": 3938,
+      "sha256": "29281664a78aac33b0c98a74f17dbb6b2b880c0fea5f5d5e78f69d4abba59f55",
+      "source_sha256": "59be2d02b37bd183028ba39bfbf575ad8776a14dcdcc91fa442063a9eaacffe8"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/training/transformer_seed17_d288_ctx512.metrics.json",
+      "bytes": 3940,
+      "sha256": "404cb01788790ed4968932c1303c56bdb361182cf8315f92ddcbe3d38c7a7a4e",
+      "source_sha256": "7667b95834c600d16168a51571f7918a98b294aa87ac0b20adc1e4658efecf75"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060109Z_inspect.guard.json",
+      "bytes": 1678,
+      "sha256": "6caff5cf833cec03a665b62268bae2f63a029a56abeb0bdf3f1dedf2b61f2646",
+      "source_sha256": "2eb5fa52e93174d9c8087ec502b7b28ca005ac5db922ffe9ebdca90fbeab7833"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060127Z_cal_d128_l4_r16_b4_c256.guard.json",
+      "bytes": 1910,
+      "sha256": "c0b72090c231552f665115342387e09d7b4936047528d40310bab67d6a3a44fb",
+      "source_sha256": "1362e6ca460bc7dfa25ddedf41a2854bd0f55d0cf2c1b88e9748bb1783997a2e"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060151Z_cal_d192_l4_r24_b8_c256.guard.json",
+      "bytes": 1911,
+      "sha256": "e8cd373052425c12f8e6b74a748b0cb63d416ed4f6b03764446279213337cf04",
+      "source_sha256": "665aff5fe163c4a98c28a7bee1062d95e663ac8bbc74adb91a4843e5d6679ad5"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060212Z_cal_d256_l6_r24_b8_c512.guard.json",
+      "bytes": 2227,
+      "sha256": "dfc7470917cf21aa279314c437e45f58d4737bd964c3a0eaeb8c21d039cbeb4c",
+      "source_sha256": "776013c6d6c9edb604a49733f715f8b55da017dda1f8b8378986297327a0bfc3"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060240Z_cal_d288_l6_r28_b8_c512.guard.json",
+      "bytes": 2536,
+      "sha256": "3db9c4c5c8130c5ccb3afe6c45fe1db3f78eedd7dc67a099190a19dffb326ebd",
+      "source_sha256": "1a21bd1948cf738e6d1c49e6671dd83df4a3625381e46ac78fc2dfb1ae03cf32"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060517Z_train_grassmann_seed11_stop50.guard.json",
+      "bytes": 5280,
+      "sha256": "4ce94aa15f22d32149bcc90e937d1cf6607c8433e58759c1f63319188a978e85",
+      "source_sha256": "7588706c3f816f099e4051fe40d4ba085727cbda4ef45a08c82e73c5ce85fe9c"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060603Z_train_transformer_seed11_stop50.guard.json",
+      "bytes": 2765,
+      "sha256": "1e91d0fd79505e8da1e0923e52125acd5001cbd99e82e2ba2cc2ca0ac3c69f7c",
+      "source_sha256": "fcc3aba0d12f736e8c0e39afcf0343a1be27682bc23d99f6b02aeb000f76d1bf"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060632Z_train_local_seed11_stop50.guard.json",
+      "bytes": 2754,
+      "sha256": "68fd95d5f7dcd2c74c34a08d1c94c7ca221e05ab5c7dd2cb365d79eaf86e70f2",
+      "source_sha256": "9a665b041194e3a8925518354e2040f69b353199aee16a0c75a4917067cbfe81"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T060724Z_train_grassmann_seed11_stop100.guard.json",
+      "bytes": 5281,
+      "sha256": "1f72fc69a0c26ede236e91552b559e8c394bb5c1ec86268a5dd08cb1f8f62d53",
+      "source_sha256": "ec5d42ec6efecfe3dbbb3b5bc5184a8765ec1ea01b3c37840146bbce917beeea"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061044Z_train_transformer_seed11_stop100.guard.json",
+      "bytes": 2769,
+      "sha256": "16dbb0bd5981b5d45e419a20800d2d5f48e4101476940a1492ab8533896f6cd9",
+      "source_sha256": "d6a92c7aea4f5c4278b02e081efbb749e9485d1a9c6e54474db877487afd5ed0"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061100Z_train_local_seed11_stop100.guard.json",
+      "bytes": 2758,
+      "sha256": "f6cc0033519addf6fbafa2be0eaac5489382e1d35e40fca5e932456849e90251",
+      "source_sha256": "ba9edc549283135e903ddff772282c6dc1403fc8e681e97ad69c34c561ce4ce3"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061114Z_train_transformer_seed17_stop100.guard.json",
+      "bytes": 3392,
+      "sha256": "c9cf7491000ae2aa772cb0d0d3f07c700ffaab082886b0c3cc89259499c2ff35",
+      "source_sha256": "7567b756fb56d29372a27b16cc8b1a9c977e9f0962944bc716423114768e39aa"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061132Z_train_local_seed17_stop100.guard.json",
+      "bytes": 3692,
+      "sha256": "5f498f58bcd25b1311b8e8410ef1f66e841739dc5099f49101c756837315ddf9",
+      "source_sha256": "cde2ab292fe44ba8f7afe5a1dc7f5dd5ba1919a1ab5e75b9889bf94ad74b57c3"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061152Z_train_grassmann_seed17_stop100.guard.json",
+      "bytes": 8737,
+      "sha256": "67ae5c6a88d305c2ffc02109418b7636c1181ca6f18a1aec4234f8ac4b83dd46",
+      "source_sha256": "4212a9d9b0ee96fc7deed8ec32517e8c4b594b6cd51ef10e9fe04068397e8a5b"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061246Z_train_local_seed23_stop100.guard.json",
+      "bytes": 3694,
+      "sha256": "d3a06335cb8e31499db8464c2ade2b9ea7cb6d7d057d7f976d8bd0b3cce76f00",
+      "source_sha256": "6bbbbbcbef95cc95c1666bd3bef8c5df6987a2bc3b31bfa606805b3c62bd8c5e"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/telemetry/20261031T061306Z_train_grassmann_seed23_stop100.guard.json",
+      "bytes": 4711,
+      "sha256": "050bfb87cfbdc9c229d7480ba4830aa344ce2425efa7acc7acddbb60b1373103",
+      "source_sha256": "d824efdbf01377141ca404b20ffe319487d6b98e4da18fd4c7e52fd029454a08"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/campaign/campaign_20261031T061334Z.json",
+      "bytes": 1401,
+      "sha256": "e8812c3282fde9a92e3b49276b2229457d12b9ed4296d95ee660365631df08eb",
+      "source_sha256": "c78332f45128004753b6082eb555ffa64453147ecd95259ae7d23ae6b7eabfed"
+    },
+    {
+      "relative_path": "experiments/2026-10-31-p22-scaled/failure_logs/20261031T061306Z_train_grassmann_seed23_stop100.stdout.log",
+      "bytes": 288,
+      "sha256": "e2e04fb50b4586625b4d778fd41357cead217032f1904369c0c8e13dc9588ba4",
+      "source_sha256": "9fc02d21e70d774661072f5358a64546cfed4a125d72a898f314496f523c14a8"
+    }
+  ],
+  "note": "Truncated Grassmann seed23 has checkpoint at step40 but no completed 100-step metrics; partial stdout and guard failure are preserved."
+}

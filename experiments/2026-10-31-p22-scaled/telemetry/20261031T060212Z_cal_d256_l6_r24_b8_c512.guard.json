@@ -1,0 +1,96 @@
+{
+  "run_label": "cal_d256_l6_r24_b8_c512",
+  "start_utc": "20261031T060212Z",
+  "command": [
+    "-m",
+    "scripts.p22_calibrate",
+    "--dim",
+    "256",
+    "--layers",
+    "6",
+    "--rank",
+    "24",
+    "--batch",
+    "8",
+    "--context",
+    "512",
+    "--steps",
+    "3",
+    "--out",
+    "results/p22/cal_d256_l6_r24_b8_c512.json"
+  ],
+  "max_seconds": 150,
+  "limits": {
+    "temp_abort_c": 78,
+    "total_vram_abort_mib": 3000,
+    "min_free_ram_gib": 8,
+    "ac_required": true,
+    "child_cuda_allocator_fraction": 0.6,
+    "sensor_interval_s": 2
+  },
+  "samples": [
+    {
+      "utc": "2026-10-31T06:02:14.019505+00:00",
+      "gpu_temp_c": 34.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 9.12,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.84,
+      "ac_line": 1,
+      "battery_percent": 59
+    },
+    {
+      "utc": "2026-10-31T06:02:16.734755+00:00",
+      "gpu_temp_c": 34.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 10.34,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.336,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 4.0
+    },
+    {
+      "utc": "2026-10-31T06:02:18.808298+00:00",
+      "gpu_temp_c": 34.0,
+      "gpu_vram_mib": 91.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 10.35,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.137,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 6.1
+    },
+    {
+      "utc": "2026-10-31T06:02:20.862208+00:00",
+      "gpu_temp_c": 39.0,
+      "gpu_vram_mib": 1777.0,
+      "gpu_util_percent": 100.0,
+      "nvidia_power_w": 20.67,
+      "sm_clock_mhz": 1987.0,
+      "free_ram_gib": 18.513,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 8.2
+    },
+    {
+      "utc": "2026-10-31T06:02:23.562990+00:00",
+      "gpu_temp_c": 36.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 10.46,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.914,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 10.9
+    }
+  ],
+  "failure": null,
+  "returncode": 0,
+  "elapsed_s": 10.88,
+  "finished_utc": "2026-10-31T06:02:23.562990+00:00"
+}

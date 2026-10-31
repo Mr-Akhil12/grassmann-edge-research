@@ -1,0 +1,67 @@
+{
+  "status": "CALIBRATION ONLY",
+  "config": {
+    "dim": 256,
+    "layers": 6,
+    "rank": 24,
+    "batch": 8,
+    "context": 512,
+    "steps": 3,
+    "kinds": [
+      "grassmann",
+      "transformer",
+      "local"
+    ],
+    "out": "results/p22/cal_d256_l6_r24_b8_c512.json"
+  },
+  "ff_widths": {
+    "transformer": 1024,
+    "grassmann": 1131,
+    "local": 1245
+  },
+  "parameter_counts": {
+    "grassmann": 5002002,
+    "transformer": 5001216,
+    "local": 5002686
+  },
+  "parameter_mismatch_fraction": 0.00029384214799809544,
+  "precision": "fp32",
+  "offsets": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "runs": [
+    {
+      "kind": "grassmann",
+      "loss": 3.613457202911377,
+      "elapsed_seconds": 1.281486100051552,
+      "step_seconds": 0.42716203335051733,
+      "peak_allocated_mib": 1464.17,
+      "peak_reserved_mib": 1704.0,
+      "parameters": 5002002
+    },
+    {
+      "kind": "transformer",
+      "loss": 3.9467318058013916,
+      "elapsed_seconds": 0.18617210001684725,
+      "step_seconds": 0.06205736667228242,
+      "peak_allocated_mib": 494.41,
+      "peak_reserved_mib": 566.0,
+      "parameters": 5001216
+    },
+    {
+      "kind": "local",
+      "loss": 3.635976791381836,
+      "elapsed_seconds": 0.23331399995367974,
+      "step_seconds": 0.07777133331789325,
+      "peak_allocated_mib": 596.71,
+      "peak_reserved_mib": 656.0,
+      "parameters": 5002686
+    }
+  ],
+  "failure": null
+}

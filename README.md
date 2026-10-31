@@ -6,7 +6,7 @@ Independent research on causal Grassmann/Pluecker-based sequence mixing and whet
 
 ## P2.2 endurance research
 
-Our [locked 6.29M-parameter P2.2 protocol](docs/P22_LOCKED_PLAN.md) documents calibration, parameter-matched architecture controls, and the local finite-runtime GPU watchdog. The larger multi-seed campaign is a staged experiment; no unverified superiority claim is implied by early calibration.
+Our [locked 6.29M-parameter P2.2 protocol](docs/P22_LOCKED_PLAN.md) documents calibration, parameter-matched architecture controls, and the local finite-runtime GPU watchdog. The [scaled calibration and interrupted endurance record](experiments/2026-10-31-p22-scaled/README.md) documents the 78°C hardware-guard stop. No multihour continuation will proceed before cooling review, and no unverified superiority claim is implied by early calibration.
 
 ## Scientific commitments
 

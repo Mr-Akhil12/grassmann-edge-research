@@ -1,0 +1,84 @@
+{
+  "run_label": "cal_d192_l4_r24_b8_c256",
+  "start_utc": "20261031T060151Z",
+  "command": [
+    "-m",
+    "scripts.p22_calibrate",
+    "--dim",
+    "192",
+    "--layers",
+    "4",
+    "--rank",
+    "24",
+    "--batch",
+    "8",
+    "--context",
+    "256",
+    "--steps",
+    "3",
+    "--out",
+    "results/p22/cal_d192_l4_r24_b8_c256.json"
+  ],
+  "max_seconds": 120,
+  "limits": {
+    "temp_abort_c": 78,
+    "total_vram_abort_mib": 3000,
+    "min_free_ram_gib": 8,
+    "ac_required": true,
+    "child_cuda_allocator_fraction": 0.6,
+    "sensor_interval_s": 2
+  },
+  "samples": [
+    {
+      "utc": "2026-10-31T06:01:52.436665+00:00",
+      "gpu_temp_c": 33.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 9.01,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.841,
+      "ac_line": 1,
+      "battery_percent": 59
+    },
+    {
+      "utc": "2026-10-31T06:01:55.136041+00:00",
+      "gpu_temp_c": 33.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 10.11,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.327,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 4.0
+    },
+    {
+      "utc": "2026-10-31T06:01:57.212046+00:00",
+      "gpu_temp_c": 34.0,
+      "gpu_vram_mib": 71.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 9.42,
+      "sm_clock_mhz": 1500.0,
+      "free_ram_gib": 19.085,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 6.1
+    },
+    {
+      "utc": "2026-10-31T06:01:59.397192+00:00",
+      "gpu_temp_c": 36.0,
+      "gpu_vram_mib": 0.0,
+      "gpu_util_percent": 0.0,
+      "nvidia_power_w": 29.64,
+      "sm_clock_mhz": 1980.0,
+      "free_ram_gib": 19.837,
+      "ac_line": 1,
+      "battery_percent": 59,
+      "elapsed_s": 8.3
+    }
+  ],
+  "failure": null,
+  "returncode": 0,
+  "elapsed_s": 8.28,
+  "finished_utc": "2026-10-31T06:01:59.397192+00:00"
+}
