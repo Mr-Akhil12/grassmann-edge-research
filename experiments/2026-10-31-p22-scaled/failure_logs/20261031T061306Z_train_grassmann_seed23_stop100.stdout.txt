@@ -1,0 +1,6 @@
+STEP grassmann_seed23_d288_ctx512 10 loss 3.18574 peakMiB 2124.0
+STEP grassmann_seed23_d288_ctx512 20 loss 2.79395 peakMiB 2124.0
+CHECKPOINT 20
+STEP grassmann_seed23_d288_ctx512 30 loss 2.65119 peakMiB 2124.0
+STEP grassmann_seed23_d288_ctx512 40 loss 2.54441 peakMiB 2124.0
+CHECKPOINT 40

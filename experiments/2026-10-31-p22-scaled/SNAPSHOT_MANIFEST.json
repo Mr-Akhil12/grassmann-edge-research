@@ -1,6 +1,6 @@
 {
   "status": "PARTIAL SCALED P2.2 ENDURANCE PILOT; STOPPED ON 78 C GPU LIMIT",
-  "captured_utc": "2026-10-31T06:18:10.764182+00:00",
+  "captured_utc": "2026-10-31T06:19:40.358175+00:00",
   "excludes": "Private 75MB model and optimizer checkpoints remain under ignored results/",
   "files": [
     {
@@ -172,7 +172,7 @@
       "source_sha256": "c78332f45128004753b6082eb555ffa64453147ecd95259ae7d23ae6b7eabfed"
     },
     {
-      "relative_path": "experiments/2026-10-31-p22-scaled/failure_logs/20261031T061306Z_train_grassmann_seed23_stop100.stdout.log",
+      "relative_path": "experiments/2026-10-31-p22-scaled/failure_logs/20261031T061306Z_train_grassmann_seed23_stop100.stdout.txt",
       "bytes": 288,
       "sha256": "e2e04fb50b4586625b4d778fd41357cead217032f1904369c0c8e13dc9588ba4",
       "source_sha256": "9fc02d21e70d774661072f5358a64546cfed4a125d72a898f314496f523c14a8"

@@ -40,7 +40,9 @@ def main():
                 decoded=publish_payload.decode("utf-8",errors="strict")
                 if any(s in decoded for s in BAD) or re.search(r"\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b", decoded):
                     raise ValueError(f"Sensitive string in {src.name}")
-                dst=target/src.name
+                # .log files are intentionally ignored by Git; export as .txt
+                # so failed-run evidence remains publicly trackable.
+                dst=target/(src.stem + ".txt" if src.suffix==".log" else src.name)
                 if dst.exists() and dst.read_bytes().replace(b"\r\n", b"\n")!=publish_payload:
                     raise ValueError(f"Refusing changed already-published file {dst}")
                 dst.write_bytes(publish_payload)
