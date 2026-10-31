@@ -1,0 +1,231 @@
+{
+  "status": "UNTRAINED ENGINEERING PROFILE, NOT MODEL PERFORMANCE EVIDENCE",
+  "date_utc": "2026-10-31T04:43:59.787780+00:00",
+  "git_revision": "267817f6c3395d0ad6577559555ecd54d88d33d8",
+  "torch": "2.10.0+cpu",
+  "python": "3.11.17",
+  "cuda_runtime": null,
+  "device": "cpu",
+  "gpu_name": null,
+  "config": {
+    "device": "cpu",
+    "lengths": "16,32",
+    "repeats": 3,
+    "warmups": 1,
+    "out": "results/p2_ci.json"
+  },
+  "samples": [
+    {
+      "kind": "grassmann",
+      "mode": "prefill",
+      "length": 16,
+      "params": 26128,
+      "median_ms": 0.9559570000021722,
+      "min_ms": 0.9246909999944819,
+      "max_ms": 3.9447580000029348,
+      "raw_ms": [
+        0.9559570000021722,
+        3.9447580000029348,
+        0.9246909999944819
+      ],
+      "cached_parity_abs_error": 4.172325134277344e-07,
+      "theoretical_cache_payload_bytes": null,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "grassmann",
+      "mode": "cached_decode",
+      "length": 16,
+      "params": 26128,
+      "median_ms": 14.717167000000586,
+      "min_ms": 12.230310999996163,
+      "max_ms": 15.677410000009218,
+      "raw_ms": [
+        14.717167000000586,
+        15.677410000009218,
+        12.230310999996163
+      ],
+      "cached_parity_abs_error": 4.172325134277344e-07,
+      "theoretical_cache_payload_bytes": 512,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "transformer",
+      "mode": "prefill",
+      "length": 16,
+      "params": 28032,
+      "median_ms": 0.3371300000054589,
+      "min_ms": 0.3338450000001103,
+      "max_ms": 0.36609199999304565,
+      "raw_ms": [
+        0.3371300000054589,
+        0.36609199999304565,
+        0.3338450000001103
+      ],
+      "cached_parity_abs_error": 4.76837158203125e-07,
+      "theoretical_cache_payload_bytes": null,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "transformer",
+      "mode": "cached_decode",
+      "length": 16,
+      "params": 28032,
+      "median_ms": 4.699606000002632,
+      "min_ms": 4.673648000007802,
+      "max_ms": 4.714188000008335,
+      "raw_ms": [
+        4.699606000002632,
+        4.673648000007802,
+        4.714188000008335
+      ],
+      "cached_parity_abs_error": 4.76837158203125e-07,
+      "theoretical_cache_payload_bytes": 8192,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "local",
+      "mode": "prefill",
+      "length": 16,
+      "params": 25360,
+      "median_ms": 0.6176950000025272,
+      "min_ms": 0.5788180000081411,
+      "max_ms": 0.6271999999967193,
+      "raw_ms": [
+        0.6271999999967193,
+        0.6176950000025272,
+        0.5788180000081411
+      ],
+      "cached_parity_abs_error": 7.152557373046875e-07,
+      "theoretical_cache_payload_bytes": null,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "local",
+      "mode": "cached_decode",
+      "length": 16,
+      "params": 25360,
+      "median_ms": 5.5734919999963495,
+      "min_ms": 5.529807000002052,
+      "max_ms": 5.580081999994491,
+      "raw_ms": [
+        5.580081999994491,
+        5.529807000002052,
+        5.5734919999963495
+      ],
+      "cached_parity_abs_error": 7.152557373046875e-07,
+      "theoretical_cache_payload_bytes": 512,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "grassmann",
+      "mode": "prefill",
+      "length": 32,
+      "params": 26640,
+      "median_ms": 1.0216740000004165,
+      "min_ms": 0.9987010000003238,
+      "max_ms": 1.023056999997607,
+      "raw_ms": [
+        1.0216740000004165,
+        1.023056999997607,
+        0.9987010000003238
+      ],
+      "cached_parity_abs_error": 5.960464477539062e-07,
+      "theoretical_cache_payload_bytes": null,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "grassmann",
+      "mode": "cached_decode",
+      "length": 32,
+      "params": 26640,
+      "median_ms": 19.49830499999905,
+      "min_ms": 19.452967999995963,
+      "max_ms": 19.51846400000079,
+      "raw_ms": [
+        19.452967999995963,
+        19.49830499999905,
+        19.51846400000079
+      ],
+      "cached_parity_abs_error": 5.960464477539062e-07,
+      "theoretical_cache_payload_bytes": 512,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "transformer",
+      "mode": "prefill",
+      "length": 32,
+      "params": 28544,
+      "median_ms": 0.37524600000438113,
+      "min_ms": 0.36127599999247195,
+      "max_ms": 0.39355299999499493,
+      "raw_ms": [
+        0.37524600000438113,
+        0.36127599999247195,
+        0.39355299999499493
+      ],
+      "cached_parity_abs_error": 3.5762786865234375e-07,
+      "theoretical_cache_payload_bytes": null,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "transformer",
+      "mode": "cached_decode",
+      "length": 32,
+      "params": 28544,
+      "median_ms": 9.450219000001425,
+      "min_ms": 9.404110999994941,
+      "max_ms": 9.508686000003763,
+      "raw_ms": [
+        9.450219000001425,
+        9.404110999994941,
+        9.508686000003763
+      ],
+      "cached_parity_abs_error": 3.5762786865234375e-07,
+      "theoretical_cache_payload_bytes": 16384,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "local",
+      "mode": "prefill",
+      "length": 32,
+      "params": 25872,
+      "median_ms": 0.6280809999879011,
+      "min_ms": 0.6041360000068607,
+      "max_ms": 0.630413999999746,
+      "raw_ms": [
+        0.6280809999879011,
+        0.6041360000068607,
+        0.630413999999746
+      ],
+      "cached_parity_abs_error": 4.76837158203125e-07,
+      "theoretical_cache_payload_bytes": null,
+      "torch_peak_cuda_allocated_bytes": null
+    },
+    {
+      "kind": "local",
+      "mode": "cached_decode",
+      "length": 32,
+      "params": 25872,
+      "median_ms": 11.513518000001,
+      "min_ms": 11.481950999993273,
+      "max_ms": 12.708419999995613,
+      "raw_ms": [
+        11.481950999993273,
+        11.513518000001,
+        12.708419999995613
+      ],
+      "cached_parity_abs_error": 4.76837158203125e-07,
+      "theoretical_cache_payload_bytes": 512,
+      "torch_peak_cuda_allocated_bytes": null
+    }
+  ],
+  "notes": [
+    "Different parameter counts and architecture operation counts",
+    "Full-sequence prefill vs Python-loop cached decode; not equivalent to production kernels",
+    "Random model weights; no language modeling quality measured",
+    "CUDA peak is torch.max_memory_allocated, not total VRAM process usage",
+    "Energy/watts per token not measured; GPU power limit unmodified",
+    "Causal state payload byte estimates exclude Python/tensor/container overhead"
+  ]
+}
