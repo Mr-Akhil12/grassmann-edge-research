@@ -16,8 +16,8 @@ DATASET_URL = ("https://huggingface.co/datasets/Salesforce/wikitext/resolve/"
                + REVISION + "/wikitext-2-raw-v1/")
 SPLIT_SHA256 = {
     "train": "49280f3dd993cbdfd322186194133d5d1935f81e1c91064c239f2a70ebb02701",
-    "validation": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
-    "test": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+    "validation": "a10eb5a42c4264c45dd38bfef4da6a74ddef5fc22cb419e1a89d54c4cc6d748f",
+    "test": "3ee89cd6a2ab912afd5d01e98867b46a67d9ec7a9eca0910e5e4c3cdd4cc1925",
 }
 MAX_BYTES = 15 * 1024 * 1024
 

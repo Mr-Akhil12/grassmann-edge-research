@@ -1,0 +1,55 @@
+{
+  "mode": "inspect",
+  "started_utc": "2026-10-31T05:05:14.327312+00:00",
+  "runs": [
+    {
+      "index": 0,
+      "command": [
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "seconds": 8.031000000075437,
+      "returncode": 0,
+      "reason": null,
+      "telemetry": [
+        {
+          "gpu_c": 34.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.58
+        },
+        {
+          "gpu_c": 35.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.09,
+          "elapsed_seconds": 2.7
+        },
+        {
+          "gpu_c": 35.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.0,
+          "elapsed_seconds": 5.4
+        },
+        {
+          "gpu_c": 36.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.59,
+          "elapsed_seconds": 8.0
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "max_gpu_c": 80,
+    "max_gpu_mib": 3400,
+    "min_free_ram_gib": 8,
+    "max_seconds": 240,
+    "sampling_interval_seconds": 2
+  },
+  "ended_utc": "2026-10-31T05:05:23.750817+00:00",
+  "error": null
+}

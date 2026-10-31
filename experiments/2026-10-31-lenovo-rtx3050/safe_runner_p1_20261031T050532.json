@@ -1,0 +1,166 @@
+{
+  "mode": "p1",
+  "started_utc": "2026-10-31T05:05:32.362762+00:00",
+  "runs": [
+    {
+      "index": 0,
+      "command": [
+        "-m",
+        "scripts.controlled_synthetic",
+        "--device",
+        "cuda",
+        "--steps",
+        "60",
+        "--seeds",
+        "11,17,23",
+        "--lag",
+        "4",
+        "--out",
+        "results/lenovo_p1_lag4.json",
+        "--max-seconds",
+        "220"
+      ],
+      "seconds": 15.655999999959022,
+      "returncode": 0,
+      "reason": null,
+      "telemetry": [
+        {
+          "gpu_c": 36.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.58
+        },
+        {
+          "gpu_c": 36.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.07,
+          "elapsed_seconds": 2.7
+        },
+        {
+          "gpu_c": 37.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 20.0,
+          "free_ram_gib": 18.3,
+          "elapsed_seconds": 4.8
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 15.0,
+          "free_ram_gib": 18.31,
+          "elapsed_seconds": 6.8
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 10.0,
+          "free_ram_gib": 18.31,
+          "elapsed_seconds": 8.9
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 21.0,
+          "free_ram_gib": 18.31,
+          "elapsed_seconds": 10.9
+        },
+        {
+          "gpu_c": 39.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 18.68,
+          "elapsed_seconds": 13.0
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.58,
+          "elapsed_seconds": 15.7
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "command": [
+        "-m",
+        "scripts.controlled_synthetic",
+        "--device",
+        "cuda",
+        "--steps",
+        "60",
+        "--seeds",
+        "11,17,23",
+        "--lag",
+        "24",
+        "--out",
+        "results/lenovo_p1_lag24.json",
+        "--max-seconds",
+        "220"
+      ],
+      "seconds": 13.125,
+      "returncode": 0,
+      "reason": null,
+      "telemetry": [
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.57
+        },
+        {
+          "gpu_c": 39.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.11,
+          "elapsed_seconds": 2.7
+        },
+        {
+          "gpu_c": 39.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 12.0,
+          "free_ram_gib": 18.34,
+          "elapsed_seconds": 4.7
+        },
+        {
+          "gpu_c": 40.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 14.0,
+          "free_ram_gib": 18.31,
+          "elapsed_seconds": 6.8
+        },
+        {
+          "gpu_c": 40.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 13.0,
+          "free_ram_gib": 18.3,
+          "elapsed_seconds": 8.9
+        },
+        {
+          "gpu_c": 41.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 16.0,
+          "free_ram_gib": 18.29,
+          "elapsed_seconds": 11.0
+        },
+        {
+          "gpu_c": 41.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.5,
+          "elapsed_seconds": 13.1
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "max_gpu_c": 80,
+    "max_gpu_mib": 3400,
+    "min_free_ram_gib": 8,
+    "max_seconds": 240,
+    "sampling_interval_seconds": 2
+  },
+  "ended_utc": "2026-10-31T05:06:02.587477+00:00",
+  "error": null
+}

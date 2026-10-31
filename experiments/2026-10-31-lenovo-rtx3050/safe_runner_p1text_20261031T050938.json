@@ -1,0 +1,90 @@
+{
+  "mode": "p1text",
+  "started_utc": "2026-10-31T05:09:38.911538+00:00",
+  "runs": [
+    {
+      "index": 0,
+      "command": [
+        "-m",
+        "scripts.controlled_realtext",
+        "--device",
+        "cuda",
+        "--steps",
+        "60",
+        "--seeds",
+        "11,17,23",
+        "--out",
+        "results/lenovo_p1_realtext.json"
+      ],
+      "seconds": 17.31200000003446,
+      "returncode": 0,
+      "reason": null,
+      "telemetry": [
+        {
+          "gpu_c": 36.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.6
+        },
+        {
+          "gpu_c": 36.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.09,
+          "elapsed_seconds": 2.7
+        },
+        {
+          "gpu_c": 37.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 25.0,
+          "free_ram_gib": 18.2,
+          "elapsed_seconds": 4.8
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 13.0,
+          "free_ram_gib": 18.12,
+          "elapsed_seconds": 6.9
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 11.0,
+          "free_ram_gib": 18.19,
+          "elapsed_seconds": 9.3
+        },
+        {
+          "gpu_c": 39.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 16.0,
+          "free_ram_gib": 18.0,
+          "elapsed_seconds": 11.4
+        },
+        {
+          "gpu_c": 39.0,
+          "gpu_mib": 117.0,
+          "gpu_pct": 11.0,
+          "free_ram_gib": 18.15,
+          "elapsed_seconds": 13.6
+        },
+        {
+          "gpu_c": 38.0,
+          "gpu_mib": 0.0,
+          "gpu_pct": 0.0,
+          "free_ram_gib": 19.54,
+          "elapsed_seconds": 17.3
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "max_gpu_c": 80,
+    "max_gpu_mib": 3400,
+    "min_free_ram_gib": 8,
+    "max_seconds": 240,
+    "sampling_interval_seconds": 2
+  },
+  "ended_utc": "2026-10-31T05:09:57.660557+00:00",
+  "error": null
+}

@@ -1,103 +1,93 @@
-# P0–P2 controlled research sprint — public protocol
+# P0–P2 controlled research protocol — 31 October 2026
 
-**Scope:** software correctness, rigorous experimental infrastructure, and
-bounded inference evaluation on Windows/RTX 3050 when reachable.
-**Explicitly out of scope:** Xiaomi 15T access, Android/ADB, external machine
-administration, firmware/drivers, unsupported claims about breakthroughs.
+This is an **open scientific investigation**, not a claim that geometric
+Grassmann flows outperform causal attention. No Xiaomi/Android access occurs
+until P3 with owner involvement.
 
-This document describes a *research program*, not an assertion of completed
-paper reproduction. Phase status is only advanced by verified evidence.
+## P0 — mathematical correctness
 
-## P0: mathematical specification and causality
+- Examine the source paper, [arXiv:2512.19428](https://arxiv.org/abs/2512.19428),
+  especially the literal forward pairing t+delta and causal-language claim.
+- Implement a paper-literal right-looking variant separately from a corrected
+  past-only left-looking variant. Never quietly conflate them.
+- Verify Pluecker exterior products against a double-precision scalar oracle.
+- Require prefix invariance and zero future-to-past gradients for causal
+  methods; deliberately show the literal variant violating the invariant.
+- Verify full-versus-incremental equivalence at multiple sequence lengths.
+- Do not claim original-author intent or exact experimental reproduction
+  without further evidence.
 
-Source: Zhang Chong, arXiv:2512.19428v1, §3.2.
-The manuscript explicitly uses the pair (z_t, z_(t+delta)) while calling
-it causal. This is inconsistent with standard prefix-limited next-token
-prediction at output position t.
+## P1 — matched-task exploratory training
 
-We implement `paper_literal` as written, and `past_causal` replacing
-t+delta with t-delta. The wedge signs depend on vector order; keep
-the ordering explicit. See docs/P0_CAUSALITY_AUDIT.md.
+### Synthetic delayed-copy
 
-Acceptance gates: scalar double-precision Pluecker oracle, numerical and
-gradient tests, prefix invariance, an actual noncausal diagnostic, full-vs-
-incremental parity. External author intent and exact 13M model outcome
-remain unverified; avoid claiming full paper reproduction.
+- Causal Grassmann, causal Transformer, non-geometric local-mixing comparator.
+- Seeds 11,17,23; model order fixed before evaluation.
+- Context 64, dimension 32, 2 layers, rank 8, offsets {1,2,4,8}.
+- Batch 4; 60 steps per seed and model; AdamW 0.002.
+- Separate lag-4 and lag-24 tasks; held-out deterministic validation.
+- Report all loss traces, run durations, parameter counts and variation.
 
-## P1: controlled exploratory learning
+### Real text
 
-**Primary negative control:** non-geometric local pair mixing with identical
-local offset access. Comparator: standard full causal attention Transformer.
-Main hypothesis: Grassmann could improve a quality/compute tradeoff beyond
-a simpler local mixer. Null: any benefit disappears under local baseline or
-optimized attention.
+- WikiText-2 raw, immutable upstream revision
+  6231e49f19a707241d6b84d9cff60a3a86b85a85.
+- SHA-256 verified train and validation; test not downloaded.
+- UTF-8 byte vocabulary (256 values), NOT the WordPiece vocab of the paper.
+- Same three model classes and three seeds; 60 steps; context 64; batch 4.
+- Validation bits/byte reported alongside per-seed values and deviations.
+- Models have different parameter counts and not equalized FLOPs; no
+  confirmatory language-quality claim can be made from these tiny runs.
 
-Predeclared pilot configuration:
-- Input: synthetic autoregressive delayed-copy sequence (deterministic).
-- Seeds: 11, 17, 23; train sequence regenerated for each step.
-- Two separate dependency lags: 4 and 24, with 64-token context.
-- Rank=8, d=32, two layers, offsets {1,2,4,8}, vocab=32, batch=4.
-- 60 optimization steps/model/seed; AdamW lr=0.002, weight decay 0.01.
-- Evaluation uses 4 held-out batches derived from distinct seed domain.
-- Model order: causal Grassmann, causal Transformer, non-geometric local.
-- Record all train losses, parameter counts, validation losses, run durations,
-  exact CLI arguments, seeds and PyTorch/Git revision.
-- No tuning, early stopping or validation-based hyperparameter selection.
+## P2 — bounded reference inference
 
-**This is only a small exploratory pilot.** It is not enough to compare
-language-model quality, estimate a robust performance distribution, or reproduce
-WikiText-2 results. The existing architectures are NOT precisely parameter-
-or FLOP-matched. Relative parameter mismatch is reported, not concealed.
-A confirmatory paper-scale investigation needs data provenance, tokenizer
-alignment, size-matched runs, tuning budget and sufficient independent seeds.
+- Compare untrained full-context prefill **separately** from cached
+  incremental decoding. The reference cached mode uses Python token loops,
+  not a fused production kernel.
+- Validate numerical parity before timing.
+- Test lengths 16,32,64,128 on both Lenovo CPU and RTX 3050.
+- Record all raw times (five repetitions following two warmups), medians,
+  PyTorch maximum allocated CUDA memory and theoretical cache payloads.
+- This is kernel/implementation diagnostic evidence, not an optimized
+  quality-versus-speed comparison.
 
-## P2: bounded inference and caching
+## Hardware safety
 
-- Confirm each architecture's full-sequence output matches true incremental
-  *past-only* decoding. A paper-literal future-looking model must reject
-  such a decode.
-- Record batch=1, float32, random-init weights; d=32, two layers, rank=8,
-  context lengths 16, 32, 64, 128.
-- Separate full-sequence prefill and token-by-token cached decoding.
-- Warm up twice, take five timed repetitions, synchronize CUDA each time.
-- Capture all raw samples, median/min/max and PyTorch max allocated VRAM.
-- Report cache *payload* estimates separately from actual GPU allocation.
-- Guard 4GB VRAM GPU using per-process PyTorch allocation fraction <=60%.
-- Windows monitor enforces temp <80 C, used VRAM <3400MiB, free RAM >=8GiB,
-  and max runtime per trial <=240s; aborts its OWN child process.
-- No overclocking, GPU driver changes, BIOS changes, power tweaks or antivirus
-  disabling. Use A/C power.
-- No energy-per-token claim without calibrated energy instrumentation.
-- Do NOT interpret untrained performance as generative AI model quality, and
-  do NOT treat Python-loop cached decode as an optimized device kernel.
+- Keep all software and model tests within isolated project virtualenv.
+- No firmware, BIOS, drivers, Windows execution policy, antivirus,
+  GPU clocks, voltage, power or unrelated project changes.
+- Python safety supervisor starts one child experiment at a time and checks
+  temperature, VRAM, free RAM and runtime every ~2 seconds.
+- Hard limits: temp below 80°C, used VRAM below 3400 MiB, free RAM at
+  least 8 GiB, per-run duration no more than 240 seconds.
+- Child receives an additional 60% PyTorch CUDA memory fraction limit.
+- Supervisor stops its *own* child if anything fails; no detached jobs.
+- Telemetry is sampled, so it does not establish unsampled peak behavior.
 
-## Commands
+### Verified Windows commands
 
-After `python -m pip install -e ".[dev]"`:
+After checking the Lenovo is powered and the Git checkout clean, run:
 
-```bash
-python -m pytest -q
-python -m scripts.controlled_synthetic --device cpu --steps 12 --seeds 11,17 --out results/controlled_ci.json
-python -m scripts.benchmark_p2 --device cpu --lengths 16,32 --warmups 1 --repeats 3 --out results/p2_ci.json
+```text
+.venv/Scripts/python.exe -m scripts.safe_windows_runner --mode inspect
+.venv/Scripts/python.exe -m scripts.safe_windows_runner --mode p1
+.venv/Scripts/python.exe -m scripts.safe_windows_runner --mode p1text
+.venv/Scripts/python.exe -m scripts.safe_windows_runner --mode p2
 ```
 
-On a **verified, powered Lenovo** from Windows PowerShell:
-```powershell
-powershell -NoProfile -File scripts\run_lenovo_safely.ps1 -Mode inspect
-powershell -NoProfile -File scripts\run_lenovo_safely.ps1 -Mode p1
-powershell -NoProfile -File scripts\run_lenovo_safely.ps1 -Mode p2
-```
+The earlier PowerShell launcher was *not* used, because the Lenovo's
+default PowerShell policy disallows scripts. No security policy was changed.
 
-The default is *inspect*, which runs no GPU training. Each other mode
-requires explicit invocation. This is **not** a scheduled/background job.
+## Evidence levels and outstanding gates
 
-## Evidence grades
+- **A — correctness:** numerical/causality/cached-parity tests verified.
+- **B — exploratory hardware:** raw guarded Lenovo GPU/CPU pilots completed.
+- **C — scientific quality:** not yet established; requires substantial,
+  truly parameter/FLOP-matched training, context and compute ablations,
+  suitable dataset controls, and independent multi-seed replication.
+- **D — edge energy:** not attempted; user authorization required for P3.
 
-A. Formal code/numerical invariants with independent test execution.
-B. Engineering CPU/GPU performance smoke test (reproducible raw measurements).
-C. Matched multi-seed scientific model-quality result (not yet achieved).
-D. Calibrated edge-device energy result (requires P3, not attempted).
-
-Do not upgrade evidence category without additional experiments. A broken
-connection to the Lenovo means P2 GPU measurements remain PENDING, irrespective
-of GitHub CI status.
+Raw Lenovo measurements and all limitations are recorded in
+[experiments/2026-10-31-lenovo-rtx3050](../experiments/2026-10-31-lenovo-rtx3050/README.md).
+Preserve every unfavorable and failed run; do not promote exploratory
+numbers to paper-scale claims.
