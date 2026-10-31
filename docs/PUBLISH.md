@@ -1,29 +1,29 @@
-# Personal GitHub publication handoff
+# Public GitHub publication record
 
-This research tree has a local main branch and commits authored as:
-Mr-Akhil12 <180930390+Mr-Akhil12@users.noreply.github.com>
-This avoids putting a personal email address in public Git history.
+The public research repository is live:
+https://github.com/Mr-Akhil12/grassmann-edge-research
 
-Do not publish until you review the README, license and release checklist.
-Prefer a PRIVATE GitHub repository first; make public only when ready.
+Created publicly on 2026-10-31 under Mr-Akhil12. Original Lenovo Git
+history was transferred and verified without rewriting commits.
+Initial GitHub main: d809be604ba14401291715292cb7a7745a8f0f66.
 
-On github.com as user Mr-Akhil12, create an empty repository named
-grassmann-edge-research. Avoid adding an online README or license because
-the local repository already contains these files.
+All research development should remain transparent, including negative or
+null results. New code should be published through small, testable changes.
+Never publish secrets, personal machine paths, credentials, or unrelated data.
 
-Then from the project root in Windows PowerShell:
+From this directory:
+  & 'C:\Program Files\Git\cmd\git.exe' status
+  & 'C:\Program Files\Git\cmd\git.exe' remote -v
+  & 'C:\Program Files\Git\cmd\git.exe' push origin main
 
-  & 'C:\Program Files\Git\cmd\git.exe' remote add origin https://github.com/Mr-Akhil12/grassmann-edge-research.git
-  & 'C:\Program Files\Git\cmd\git.exe' push -u origin main
+GitHub authentication on the Lenovo may require a browser confirmation.
+A successful push from the authenticated Mac used a checksum-verified
+git bundle to preserve the original history. Do not paste access tokens into
+scripts or terminal history.
 
-The repository URL above is a planned destination, NOT confirmed to exist yet.
-GitHub may request browser authentication at push time. Never paste a token
-into code or terminal history.
+Initial public CI:
+https://github.com/Mr-Akhil12/grassmann-edge-research/actions/runs/41168424033
 
-Before public visibility, complete docs/RELEASE_CHECKLIST.md.
-Do not publish the sibling _local_setup_notes or _source_references directories.
-Do not include venvs, pip caches, personally identifiable hardware snapshots,
-or proprietary datasets.
-
-The project deliberately keeps all training/model-quality claims unproven
-until matched experimental protocols have passed.
+Scientific checklist is publicly tracked as GitHub Issues #1 through #6.
+Keep docs/RELEASE_CHECKLIST.md for milestone-quality report releases; that
+does NOT prevent an openly accessible work-in-progress repository.
