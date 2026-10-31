@@ -2,7 +2,7 @@
 
 Independent research on causal Grassmann/Pluecker-based sequence mixing and whether it yields a measurable quality-versus-compute tradeoff on practical edge hardware.
 
-**Status: research scaffold, not a paper reproduction.** No edge performance advantage has been demonstrated.
+**Status: open research scaffold, not a completed paper reproduction.** No edge performance advantage has been demonstrated. See [live sprint status](docs/SPRINT_STATUS.md), [P0 causality audit](docs/P0_CAUSALITY_AUDIT.md), [P0–P2 protocol](docs/SPRINT_P0_P2.md), and [preserved cross-platform raw results](experiments/2026-10-31-crossplatform-ci/README.md).
 
 ## Scientific commitments
 
