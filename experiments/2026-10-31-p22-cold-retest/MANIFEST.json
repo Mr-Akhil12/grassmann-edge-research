@@ -1,0 +1,24 @@
+{
+  "status": "successful guarded cold-start retest; original thermal abort retained unchanged",
+  "timestamp_utc": "2026-10-31T06:39:15.112151+00:00",
+  "source_revision_before_retest": "6defb0180f1df87b946a58c83ce91c20ea9666c7",
+  "source_checkpoint": "grassmann seed23 step40 original SHA256 BC0F67B1D1CFD21F972ED7D8A03E73F205ACAE5FF4029E7D92DEFBD2ABCA931F",
+  "checkpoint_binary_published": false,
+  "files": [
+    {
+      "file": "guard.json",
+      "bytes": 5946,
+      "sha256": "d51105ccd3057bd474a34aededcf869b3b9d2bf840890d045cf78ee11493d66c"
+    },
+    {
+      "file": "training_metrics.json",
+      "bytes": 3939,
+      "sha256": "bd254f5521e4cf6ec71e3c7543f1177d2822fe81bd0bd66a431f536efcc89166"
+    },
+    {
+      "file": "training_stdout.txt",
+      "bytes": 595,
+      "sha256": "e8d929be89ea98c04bb2c076f64f0e3c5a6f6cc8b02f4a26b9bb873e5c360250"
+    }
+  ]
+}

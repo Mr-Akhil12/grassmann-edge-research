@@ -1,0 +1,11 @@
+RESUMED grassmann_seed23_d288_ctx512 40
+STEP grassmann_seed23_d288_ctx512 50 loss 2.58084 peakMiB 2124.0
+STEP grassmann_seed23_d288_ctx512 60 loss 2.5743 peakMiB 2124.0
+CHECKPOINT 60
+STEP grassmann_seed23_d288_ctx512 70 loss 2.54977 peakMiB 2124.0
+STEP grassmann_seed23_d288_ctx512 80 loss 2.52589 peakMiB 2124.0
+CHECKPOINT 80
+STEP grassmann_seed23_d288_ctx512 90 loss 2.52534 peakMiB 2124.0
+STEP grassmann_seed23_d288_ctx512 100 loss 2.45718 peakMiB 2124.0
+CHECKPOINT 100
+COMPLETE grassmann_seed23_d288_ctx512 step 100 validation_bpb 3.590425 peak_alloc_mib 1883.8 checkpoint_hash bbb2c06337c9

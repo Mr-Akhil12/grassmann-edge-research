@@ -81,7 +81,7 @@ def ensure_safe(t):
     return t
 
 
-def run_child(args, seconds, label):
+def run_child(args, seconds, label, *, cold_retest=False):
     OUT.mkdir(parents=True, exist_ok=True)
     started_utc = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     prefix = OUT / (started_utc + "_" + label)
@@ -95,13 +95,18 @@ def run_child(args, seconds, label):
                            "min_free_ram_gib": 8, "ac_required": True,
                            "child_cuda_allocator_fraction": 0.60,
                            "sensor_interval_s": 2},
-                "samples": telemetry, "failure": None, "returncode": None}
+                "samples": telemetry, "failure": None, "returncode": None,
+                "cold_retest_authorized": cold_retest}
     t0 = time.monotonic()
     child = None
     try:
-        if (OUT / "STOP_REQUESTED").exists():
+        if (OUT / "STOP_REQUESTED").exists() and not cold_retest:
             raise RuntimeError("STOP_REQUESTED marker exists")
+        if (OUT / "ABORT_NOW").exists():
+            raise RuntimeError("ABORT_NOW marker exists")
         before = ensure_safe(sensors())
+        if cold_retest and before["gpu_temp_c"] > 38:
+            raise RuntimeError("Cold retest requires GPU <=38C at launch")
         telemetry.append(before)
         print("P22 START", label, before, flush=True)
         env = {**os.environ, "OMP_NUM_THREADS": "4", "MKL_NUM_THREADS": "4"}
@@ -110,7 +115,9 @@ def run_child(args, seconds, label):
                                      stdout=stdout, stderr=stderr)
             while child.poll() is None:
                 time.sleep(2)
-                if (OUT / "STOP_REQUESTED").exists():
+                if (OUT / "ABORT_NOW").exists():
+                    raise RuntimeError("ABORT_NOW requested by owner")
+                if (OUT / "STOP_REQUESTED").exists() and not cold_retest:
                     raise RuntimeError("STOP_REQUESTED requested by owner")
                 sample = ensure_safe(sensors())
                 sample["elapsed_s"] = round(time.monotonic() - t0, 1)
@@ -150,9 +157,16 @@ def main():
     parser.add_argument("--kind", choices=("grassmann", "transformer", "local"), default="grassmann")
     parser.add_argument("--seed", type=int, choices=(11,17,23,31,47), default=11)
     parser.add_argument("--stop-step", type=int, default=50)
+    parser.add_argument("--cold-retest", action="store_true",
+                        help="One specific short seed-23 cold retry while STOP marker stays in place")
     p = parser.parse_args()
     if not (30 <= p.seconds <= 240):
         parser.error("Only bounded 30–240 s supervised probes")
+    if p.cold_retest and not (
+        p.mode=="train" and p.kind=="grassmann" and p.seed==23 and
+        p.stop_step==100 and (p.dim,p.layers,p.rank,p.batch,p.context)==(288,6,28,8,512) and
+        p.seconds<=120 and (OUT / "STOP_REQUESTED").is_file()):
+        parser.error("Cold retest only permitted for interrupted Grassmann seed23 40->100")
     if p.mode == "inspect":
         cmd = [sys.executable, "-m", "pytest", "-q"]
         label = "inspect"
@@ -173,7 +187,7 @@ def main():
                "--rank", str(p.rank), "--batch", str(p.batch),
                "--context", str(p.context), "--steps", "3",
                "--out", "results/p22/" + label + ".json"]
-    run_child(cmd, p.seconds, label)
+    run_child(cmd, p.seconds, label, cold_retest=p.cold_retest)
 
 
 if __name__ == "__main__":

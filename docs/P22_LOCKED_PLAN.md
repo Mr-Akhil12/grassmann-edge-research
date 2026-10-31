@@ -1,6 +1,6 @@
 # P2.2 locked protocol — Lenovo scaled endurance study (2026-10-31)
 
-**Status: calibrated, short rehearsals completed; extended campaign HALTED at the 78°C GPU guard. No multihour run authorized.** See [public raw evidence and incomplete-trial report](../experiments/2026-10-31-p22-scaled/README.md). P2.2 is paused pending cooling review.
+**Status: scaled campaign halted at 78°C; later one-off cooled-start recovery succeeded, but multihour endurance remains PAUSED.** See [original thermal abort and incomplete study](../experiments/2026-10-31-p22-scaled/README.md) and [separate cooled-start seed-23 retest](../experiments/2026-10-31-p22-cold-retest/README.md). Do not automatically resume or lift the safety stop.
 Purpose: establish defensible **small-scale, implementation- and hardware-
 specific** results, not a universal Grassmann-vs-attention verdict.
 
