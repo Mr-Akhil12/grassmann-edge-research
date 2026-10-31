@@ -4,6 +4,10 @@ Independent research on causal Grassmann/Pluecker-based sequence mixing and whet
 
 **Status: open research scaffold, not a completed paper reproduction.** No edge performance advantage has been demonstrated. See [live sprint status](docs/SPRINT_STATUS.md), [P0 causality audit](docs/P0_CAUSALITY_AUDIT.md), [P0–P2 protocol](docs/SPRINT_P0_P2.md), and [preserved cross-platform raw results](experiments/2026-10-31-crossplatform-ci/README.md). The [guarded Lenovo CPU/GPU and WikiText-2 pilots](experiments/2026-10-31-lenovo-rtx3050/README.md) are also public; their limitations are described in the report.
 
+## P2.2 endurance research
+
+Our [locked 6.29M-parameter P2.2 protocol](docs/P22_LOCKED_PLAN.md) documents calibration, parameter-matched architecture controls, and the local finite-runtime GPU watchdog. The larger multi-seed campaign is a staged experiment; no unverified superiority claim is implied by early calibration.
+
 ## Scientific commitments
 
 - Paper-as-written and causally corrected implementations are separate variants.

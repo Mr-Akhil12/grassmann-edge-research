@@ -19,5 +19,6 @@ checkpoints/
 results/*.json
 results/*.csv
 results/*.parquet
+results/**
 !results/.gitkeep
 hardware-local/
